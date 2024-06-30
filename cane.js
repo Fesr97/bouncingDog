@@ -14,6 +14,7 @@ class Cane {
   
   image = imageRight;
   speed = 0;
+  audio = new Audio("./jumpCane.m4a");
 acceleration = 8 ;
   left = false;
   swapImage() {
@@ -45,7 +46,10 @@ acceleration = 8 ;
     this.swapImage();*/
     if (this.controls.jump){
       this.speed = this.acceleration;
-      
+      const audio = new Audio("./jumpCane.m4a");
+      audio.currentTime = 0.28;
+      audio.play();
+      audio.playbackRate = 2;
       this.controls.jump = false 
     };
     this.speed = this.speed - 0.4;
