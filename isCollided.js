@@ -7,3 +7,4 @@ export function isCollided(a, b) {
   }
   return false;
 }
+// sto collidendo
